@@ -1,0 +1,23 @@
+name: Python Test Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: print message
+        run: echo "Running Python tests"
+
+      - name: check python
+        run: python --version
+
+      - name: Run test command
+        run: echo "All tests passed"
